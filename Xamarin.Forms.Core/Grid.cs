@@ -212,7 +212,8 @@ namespace Xamarin.Forms
 			view.ComputedConstraint = result;
 		}
 
-		internal override void InvalidateMeasureInternal(InvalidationTrigger trigger)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public override void InvalidateMeasureInternal(InvalidationTrigger trigger)
 		{
 			base.InvalidateMeasureInternal(trigger);
 			_columns = null;

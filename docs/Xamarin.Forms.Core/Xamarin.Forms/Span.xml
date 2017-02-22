@@ -1,6 +1,6 @@
 <Type Name="Span" FullName="Xamarin.Forms.Span">
-  <TypeSignature Language="C#" Value="public sealed class Span : System.ComponentModel.INotifyPropertyChanged" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Span extends System.Object implements class System.ComponentModel.INotifyPropertyChanged" />
+  <TypeSignature Language="C#" Value="public sealed class Span : System.ComponentModel.INotifyPropertyChanged, Xamarin.Forms.Internals.IFontElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Span extends System.Object implements class System.ComponentModel.INotifyPropertyChanged, class Xamarin.Forms.Internals.IFontElement" />
   <AssemblyInfo>
     <AssemblyName>Xamarin.Forms.Core</AssemblyName>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
@@ -15,6 +15,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>System.ComponentModel.INotifyPropertyChanged</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Xamarin.Forms.Internals.IFontElement</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>

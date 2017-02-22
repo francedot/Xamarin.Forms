@@ -181,6 +181,30 @@ var stackLayout = new StackLayout {
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="InvalidateMeasureInternal">
+      <MemberSignature Language="C#" Value="public override void InvalidateMeasureInternal (Xamarin.Forms.Internals.InvalidationTrigger trigger);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void InvalidateMeasureInternal(valuetype Xamarin.Forms.Internals.InvalidationTrigger trigger) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="trigger" Type="Xamarin.Forms.Internals.InvalidationTrigger" />
+      </Parameters>
+      <Docs>
+        <param name="trigger">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="LayoutChildren">
       <MemberSignature Language="C#" Value="protected override void LayoutChildren (double x, double y, double width, double height);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void LayoutChildren(float64 x, float64 y, float64 width, float64 height) cil managed" />

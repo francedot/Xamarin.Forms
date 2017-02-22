@@ -1,6 +1,6 @@
-﻿namespace Xamarin.Forms
+﻿namespace Xamarin.Forms.Internals
 {
-	internal interface IPanGestureController
+	public interface IPanGestureController
 	{
 		void SendPan(Element sender, double totalX, double totalY, int gestureId);
 

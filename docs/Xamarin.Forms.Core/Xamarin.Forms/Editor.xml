@@ -1,6 +1,6 @@
 <Type Name="Editor" FullName="Xamarin.Forms.Editor">
-  <TypeSignature Language="C#" Value="public class Editor : Xamarin.Forms.InputView, Xamarin.Forms.IEditorController, Xamarin.Forms.IElementConfiguration&lt;Xamarin.Forms.Editor&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Editor extends Xamarin.Forms.InputView implements class Xamarin.Forms.IEditorController, class Xamarin.Forms.IElementConfiguration`1&lt;class Xamarin.Forms.Editor&gt;, class Xamarin.Forms.IElementController, class Xamarin.Forms.IViewController, class Xamarin.Forms.IVisualElementController" />
+  <TypeSignature Language="C#" Value="public class Editor : Xamarin.Forms.InputView, Xamarin.Forms.IEditorController, Xamarin.Forms.IElementConfiguration&lt;Xamarin.Forms.Editor&gt;, Xamarin.Forms.Internals.IFontElement" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Editor extends Xamarin.Forms.InputView implements class Xamarin.Forms.IEditorController, class Xamarin.Forms.IElementConfiguration`1&lt;class Xamarin.Forms.Editor&gt;, class Xamarin.Forms.IElementController, class Xamarin.Forms.Internals.IFontElement, class Xamarin.Forms.IViewController, class Xamarin.Forms.IVisualElementController" />
   <AssemblyInfo>
     <AssemblyName>Xamarin.Forms.Core</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -20,6 +20,9 @@
     </Interface>
     <Interface>
       <InterfaceName>Xamarin.Forms.IElementConfiguration&lt;Xamarin.Forms.Editor&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Xamarin.Forms.Internals.IFontElement</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>

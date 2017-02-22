@@ -1,6 +1,6 @@
 <Type Name="SearchBar" FullName="Xamarin.Forms.SearchBar">
-  <TypeSignature Language="C#" Value="public class SearchBar : Xamarin.Forms.View, Xamarin.Forms.IElementConfiguration&lt;Xamarin.Forms.SearchBar&gt;, Xamarin.Forms.ISearchBarController" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchBar extends Xamarin.Forms.View implements class Xamarin.Forms.IElementConfiguration`1&lt;class Xamarin.Forms.SearchBar&gt;, class Xamarin.Forms.ISearchBarController" />
+  <TypeSignature Language="C#" Value="public class SearchBar : Xamarin.Forms.View, Xamarin.Forms.IElementConfiguration&lt;Xamarin.Forms.SearchBar&gt;, Xamarin.Forms.Internals.IFontElement, Xamarin.Forms.ISearchBarController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SearchBar extends Xamarin.Forms.View implements class Xamarin.Forms.IElementConfiguration`1&lt;class Xamarin.Forms.SearchBar&gt;, class Xamarin.Forms.Internals.IFontElement, class Xamarin.Forms.ISearchBarController" />
   <AssemblyInfo>
     <AssemblyName>Xamarin.Forms.Core</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -17,6 +17,9 @@
   <Interfaces>
     <Interface>
       <InterfaceName>Xamarin.Forms.IElementConfiguration&lt;Xamarin.Forms.SearchBar&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Xamarin.Forms.Internals.IFontElement</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>Xamarin.Forms.ISearchBarController</InterfaceName>

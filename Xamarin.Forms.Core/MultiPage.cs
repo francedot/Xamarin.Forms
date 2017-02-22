@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms
 {
@@ -159,7 +161,8 @@ namespace Xamarin.Forms
 		{
 		}
 
-		internal static int GetIndex(T page)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public static int GetIndex(T page)
 		{
 			if (page == null)
 				throw new ArgumentNullException("page");
@@ -167,7 +170,8 @@ namespace Xamarin.Forms
 			return (int)page.GetValue(IndexProperty);
 		}
 
-		internal T GetPageByIndex(int index)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public T GetPageByIndex(int index)
 		{
 			foreach (T page in InternalChildren)
 			{
@@ -177,7 +181,8 @@ namespace Xamarin.Forms
 			return null;
 		}
 
-		internal static void SetIndex(Page page, int index)
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public static void SetIndex(Page page, int index)
 		{
 			if (page == null)
 				throw new ArgumentNullException("page");

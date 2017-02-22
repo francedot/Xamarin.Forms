@@ -88,6 +88,8 @@
     <Compile Include="DateChangedEventArgs.cs" />
     <Compile Include="DelegateLogListener.cs" />
     <Compile Include="IEditorController.cs" />
+    <Compile Include="IWebViewController.cs" />
+    <Compile Include="INavigationMenuController.cs" />
     <Compile Include="Internals\EffectUtilities.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="PlatformConfiguration\AndroidSpecific\AppCompat\Application.cs" />
