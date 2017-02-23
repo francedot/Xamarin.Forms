@@ -220,7 +220,6 @@ namespace Xamarin.Forms
 
 		void AttachNodesFromViewHierachy(View view)
 		{
-
 			var node = GetNode(view);
 			// Only leaf nodes should have a measure function
 			if (view.IsLeaf())
@@ -231,9 +230,6 @@ namespace Xamarin.Forms
 			}
 
 			node.SetMeasure(null);
-
-			if (view != this)
-				return;
 
 			// Create a list of all the subviews that we are going to use for layout.
 			var subviewsToInclude = new List<View>();
@@ -259,8 +255,8 @@ namespace Xamarin.Forms
 					subViewNode.FlexGrow = GetGrow(subView);
 					subViewNode.FlexBasis = GetBasis(subView);
 					subViewNode.FlexShrink = GetShrink(subView);
-                    subViewNode.AlignSelf = GetAlignSelf(subView);
-                    subViewNode.Flex = GetFlex(subView);
+					subViewNode.AlignSelf = GetAlignSelf(subView);
+					subViewNode.Flex = GetFlex(subView);
 					node.Insert(i, subViewNode);
 				}
 			}
