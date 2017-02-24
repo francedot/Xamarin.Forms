@@ -659,7 +659,11 @@ namespace Xamarin.Forms
 		public event EventHandler<FocusRequestArgs> FocusChangeRequested;
 
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public virtual void InvalidateMeasureInternal(InvalidationTrigger trigger)
+		public void InvalidateMeasureNonVirtual(InvalidationTrigger trigger)
+		{
+			InvalidateMeasureInternal(trigger);
+		}
+		internal virtual void InvalidateMeasureInternal(InvalidationTrigger trigger)
 		{
 			_measureCache.Clear();
 			MeasureInvalidated?.Invoke(this, new InvalidationEventArgs(trigger));

@@ -1,4 +1,4 @@
-﻿namespace Xamarin.Forms.Internals
+﻿namespace Xamarin.Forms
 {
 	public interface IPanGestureController
 	{

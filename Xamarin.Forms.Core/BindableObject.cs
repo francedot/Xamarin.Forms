@@ -172,8 +172,7 @@ namespace Xamarin.Forms
 			return GetContext(targetProperty) == null;
 		}
 
-		[EditorBrowsable(EditorBrowsableState.Never)]
-		public object[] GetValues(BindableProperty property0, BindableProperty property1)
+		internal object[] GetValues(BindableProperty property0, BindableProperty property1)
 		{
 			var values = new object[2];
 
@@ -324,8 +323,7 @@ namespace Xamarin.Forms
 			SetValue(property, value, fromStyle, true);
 		}
 
-		[EditorBrowsable(EditorBrowsableState.Never)]
-		public void SetValueCore(BindablePropertyKey propertyKey, object value, SetValueFlags attributes = SetValueFlags.None)
+		internal void SetValueCore(BindablePropertyKey propertyKey, object value, SetValueFlags attributes = SetValueFlags.None)
 		{
 			SetValueCore(propertyKey.BindableProperty, value, attributes, SetValuePrivateFlags.None);
 		}

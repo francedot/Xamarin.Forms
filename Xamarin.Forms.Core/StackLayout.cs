@@ -75,8 +75,7 @@ namespace Xamarin.Forms
 			ComputeConstraintForView(view, false);
 		}
 
-		[EditorBrowsable(EditorBrowsableState.Never)]
-		public override void InvalidateMeasureInternal(InvalidationTrigger trigger)
+		internal override void InvalidateMeasureInternal(InvalidationTrigger trigger)
 		{
 			_layoutInformation = new LayoutInformation();
 			base.InvalidateMeasureInternal(trigger);

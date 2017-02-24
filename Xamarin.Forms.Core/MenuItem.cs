@@ -66,14 +66,6 @@ namespace Xamarin.Forms
 			set { SetValue(IsEnabledProperty, value); }
 		}
 
-		bool IMenuItemController.IsEnabled
-		{
-			get
-			{
-				return IsEnabled;
-			}
-		}
-
 		bool IsEnabledCore
 		{
 			set { SetValueCore(IsEnabledProperty, value); }

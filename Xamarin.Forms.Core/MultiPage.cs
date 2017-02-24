@@ -11,7 +11,7 @@ using Xamarin.Forms.Internals;
 namespace Xamarin.Forms
 {
 	[ContentProperty("Children")]
-	public abstract class MultiPage<T> : Page, IViewContainer<T>, IPageContainer<T>, IItemsView<T> where T : Page
+	public abstract class MultiPage<T> : Page, IViewContainer<T>, IPageContainer<T>, IItemsView<T>, IMultiPageController<T> where T : Page
 	{
 		public static readonly BindableProperty ItemsSourceProperty = BindableProperty.Create("ItemsSource", typeof(IEnumerable), typeof(MultiPage<>), null);
 
