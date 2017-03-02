@@ -94,6 +94,7 @@
     <Compile Include="Internals\EffectUtilities.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="IMultiPageController.cs" />
+    <Compile Include="LockableObservableListWrapper.cs" />
     <Compile Include="PlatformConfiguration\AndroidSpecific\AppCompat\Application.cs" />
     <Compile Include="PlatformConfiguration\AndroidSpecific\Application.cs" />
     <Compile Include="PlatformConfiguration\AndroidSpecific\TabbedPage.cs" />
