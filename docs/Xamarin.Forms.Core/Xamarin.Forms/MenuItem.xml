@@ -354,22 +354,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Xamarin.Forms.IMenuItemController.IsEnabled">
-      <MemberSignature Language="C#" Value="bool Xamarin.Forms.IMenuItemController.IsEnabled { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Xamarin.Forms.IMenuItemController.IsEnabled" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>2.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>Internal.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Xamarin.Forms.IMenuItemController.IsEnabledPropertyName">
       <MemberSignature Language="C#" Value="string Xamarin.Forms.IMenuItemController.IsEnabledPropertyName { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Xamarin.Forms.IMenuItemController.IsEnabledPropertyName" />

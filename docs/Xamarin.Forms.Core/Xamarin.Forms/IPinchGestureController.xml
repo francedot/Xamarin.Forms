@@ -1,4 +1,4 @@
-<Type Name="IPinchGestureController" FullName="Xamarin.Forms.Internals.IPinchGestureController">
+<Type Name="IPinchGestureController" FullName="Xamarin.Forms.IPinchGestureController">
   <TypeSignature Language="C#" Value="public interface IPinchGestureController" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPinchGestureController" />
   <AssemblyInfo>

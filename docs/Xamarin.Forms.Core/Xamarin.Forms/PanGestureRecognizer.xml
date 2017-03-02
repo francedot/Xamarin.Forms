@@ -1,6 +1,6 @@
 <Type Name="PanGestureRecognizer" FullName="Xamarin.Forms.PanGestureRecognizer">
-  <TypeSignature Language="C#" Value="public class PanGestureRecognizer : Xamarin.Forms.GestureRecognizer, Xamarin.Forms.Internals.IPanGestureController" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanGestureRecognizer extends Xamarin.Forms.GestureRecognizer implements class Xamarin.Forms.Internals.IPanGestureController" />
+  <TypeSignature Language="C#" Value="public class PanGestureRecognizer : Xamarin.Forms.GestureRecognizer, Xamarin.Forms.IPanGestureController" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanGestureRecognizer extends Xamarin.Forms.GestureRecognizer implements class Xamarin.Forms.IPanGestureController" />
   <AssemblyInfo>
     <AssemblyName>Xamarin.Forms.Core</AssemblyName>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
@@ -11,7 +11,7 @@
   </Base>
   <Interfaces>
     <Interface>
-      <InterfaceName>Xamarin.Forms.Internals.IPanGestureController</InterfaceName>
+      <InterfaceName>Xamarin.Forms.IPanGestureController</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>
@@ -82,9 +82,9 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Xamarin.Forms.Internals.IPanGestureController.SendPan">
+    <Member MemberName="Xamarin.Forms.IPanGestureController.SendPan">
       <MemberSignature Language="C#" Value="void IPanGestureController.SendPan (Xamarin.Forms.Element sender, double totalX, double totalY, int gestureId);" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.Internals.IPanGestureController.SendPan(class Xamarin.Forms.Element sender, float64 totalX, float64 totalY, int32 gestureId) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.IPanGestureController.SendPan(class Xamarin.Forms.Element sender, float64 totalX, float64 totalY, int32 gestureId) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -107,9 +107,9 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Xamarin.Forms.Internals.IPanGestureController.SendPanCanceled">
+    <Member MemberName="Xamarin.Forms.IPanGestureController.SendPanCanceled">
       <MemberSignature Language="C#" Value="void IPanGestureController.SendPanCanceled (Xamarin.Forms.Element sender, int gestureId);" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.Internals.IPanGestureController.SendPanCanceled(class Xamarin.Forms.Element sender, int32 gestureId) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.IPanGestureController.SendPanCanceled(class Xamarin.Forms.Element sender, int32 gestureId) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -128,9 +128,9 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Xamarin.Forms.Internals.IPanGestureController.SendPanCompleted">
+    <Member MemberName="Xamarin.Forms.IPanGestureController.SendPanCompleted">
       <MemberSignature Language="C#" Value="void IPanGestureController.SendPanCompleted (Xamarin.Forms.Element sender, int gestureId);" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.Internals.IPanGestureController.SendPanCompleted(class Xamarin.Forms.Element sender, int32 gestureId) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.IPanGestureController.SendPanCompleted(class Xamarin.Forms.Element sender, int32 gestureId) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -149,9 +149,9 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Xamarin.Forms.Internals.IPanGestureController.SendPanStarted">
+    <Member MemberName="Xamarin.Forms.IPanGestureController.SendPanStarted">
       <MemberSignature Language="C#" Value="void IPanGestureController.SendPanStarted (Xamarin.Forms.Element sender, int gestureId);" />
-      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.Internals.IPanGestureController.SendPanStarted(class Xamarin.Forms.Element sender, int32 gestureId) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Xamarin.Forms.IPanGestureController.SendPanStarted(class Xamarin.Forms.Element sender, int32 gestureId) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>

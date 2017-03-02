@@ -1,4 +1,4 @@
-<Type Name="IPanGestureController" FullName="Xamarin.Forms.Internals.IPanGestureController">
+<Type Name="IPanGestureController" FullName="Xamarin.Forms.IPanGestureController">
   <TypeSignature Language="C#" Value="public interface IPanGestureController" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPanGestureController" />
   <AssemblyInfo>

@@ -248,6 +248,7 @@
       <Type Name="IEntryController" Kind="Interface" />
       <Type Name="IExtendedTypeConverter" Kind="Interface" />
       <Type Name="IGestureRecognizer" Kind="Interface" />
+      <Type Name="IGridController" Kind="Interface" />
       <Type Name="IImageController" Kind="Interface" />
       <Type Name="IItemsView`1" DisplayName="IItemsView&lt;T&gt;" Kind="Interface" />
       <Type Name="IItemViewController" Kind="Interface" />
@@ -262,6 +263,7 @@
       <Type Name="IMasterDetailPageController" Kind="Interface" />
       <Type Name="IMenuItemController" Kind="Interface" />
       <Type Name="IMessagingCenter" Kind="Interface" />
+      <Type Name="IMultiPageController`1" DisplayName="IMultiPageController&lt;T&gt;" Kind="Interface" />
       <Type Name="INativeElementView" Kind="Interface" />
       <Type Name="INavigation" Kind="Interface" />
       <Type Name="INavigationMenuController" Kind="Interface" />
@@ -271,6 +273,8 @@
       <Type Name="IOpenGLViewController" Kind="Interface" />
       <Type Name="IPageContainer`1" DisplayName="IPageContainer&lt;T&gt;" Kind="Interface" />
       <Type Name="IPageController" Kind="Interface" />
+      <Type Name="IPanGestureController" Kind="Interface" />
+      <Type Name="IPinchGestureController" Kind="Interface" />
       <Type Name="IPlatform" Kind="Interface" />
       <Type Name="IPlatformElementConfiguration`2" DisplayName="IPlatformElementConfiguration&lt;TPlatform,TElement&gt;" Kind="Interface" />
       <Type Name="IPlatformEngine" Kind="Interface" />
@@ -453,12 +457,11 @@
       <Type Name="IIsolatedStorageFile" Kind="Interface" />
       <Type Name="INameScope" Kind="Interface" />
       <Type Name="InvalidationTrigger" Kind="Enumeration" />
-      <Type Name="IPanGestureController" Kind="Interface" />
-      <Type Name="IPinchGestureController" Kind="Interface" />
       <Type Name="IPlatform" Kind="Interface" />
       <Type Name="IPlatformServices" Kind="Interface" />
       <Type Name="IResourceDictionary" Kind="Interface" />
       <Type Name="ISystemResourcesProvider" Kind="Interface" />
+      <Type Name="LockableObservableListWrapper" Kind="Class" />
       <Type Name="Log" Kind="Class" />
       <Type Name="LogListener" Kind="Class" />
       <Type Name="NameScope" Kind="Class" />
