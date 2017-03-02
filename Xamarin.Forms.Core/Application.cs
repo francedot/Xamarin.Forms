@@ -55,7 +55,8 @@ namespace Xamarin.Forms
 		public static Application Current
 		{
 			get { return s_current; }
-			set {
+			set 
+			{
 				if (s_current == value)
 					return;
 				if (value == null)
