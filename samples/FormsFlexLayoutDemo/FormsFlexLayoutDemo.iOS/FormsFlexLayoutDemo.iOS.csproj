@@ -146,6 +146,10 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Facebook.Yoga, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Facebook.Yoga.1.1.0.23-pre\lib\Xamarin.iOS10\Facebook.Yoga.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -166,9 +170,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Facebook.Yoga">
-      <HintPath>..\..\..\packages\Facebook.Yoga.1.2.0-pre1\lib\Xamarin.iOS10\Facebook.Yoga.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin.Forms.FlexLayout\Xamarin.Forms.FlexLayout.Engine\Xamarin.Forms.FlexLayout.Engine.Yoga\Xamarin.FlexLayoutEngine.Yoga.csproj">
