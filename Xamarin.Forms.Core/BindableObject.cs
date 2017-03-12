@@ -544,55 +544,64 @@ namespace Xamarin.Forms
 
 		void SetValueActual(BindableProperty property, BindablePropertyContext context, object value, bool currentlyApplying, SetValueFlags attributes, bool silent = false)
 		{
-			object original = context.Value;
-			bool raiseOnEqual = (attributes & SetValueFlags.RaiseOnEqual) != 0;
-			bool clearDynamicResources = (attributes & SetValueFlags.ClearDynamicResource) != 0;
-			bool clearOneWayBindings = (attributes & SetValueFlags.ClearOneWayBindings) != 0;
-			bool clearTwoWayBindings = (attributes & SetValueFlags.ClearTwoWayBindings) != 0;
+		    try
+		    {
+                FormsProfiler.Start();
 
-			bool same = Equals(value, original);
-			if (!silent && (!same || raiseOnEqual))
-			{
-				if (property.PropertyChanging != null)
-					property.PropertyChanging(this, original, value);
+                object original = context.Value;
+                bool raiseOnEqual = (attributes & SetValueFlags.RaiseOnEqual) != 0;
+                bool clearDynamicResources = (attributes & SetValueFlags.ClearDynamicResource) != 0;
+                bool clearOneWayBindings = (attributes & SetValueFlags.ClearOneWayBindings) != 0;
+                bool clearTwoWayBindings = (attributes & SetValueFlags.ClearTwoWayBindings) != 0;
 
-				OnPropertyChanging(property.PropertyName);
-			}
+                bool same = Equals(value, original);
+                if (!silent && (!same || raiseOnEqual))
+                {
+                    if (property.PropertyChanging != null)
+                        property.PropertyChanging(this, original, value);
 
-			if (!same || raiseOnEqual)
-			{
-				context.Value = value;
-			}
+                    OnPropertyChanging(property.PropertyName);
+                }
 
-			context.Attributes &= ~BindableContextAttributes.IsDefaultValue;
+                if (!same || raiseOnEqual)
+                {
+                    context.Value = value;
+                }
 
-			if ((context.Attributes & BindableContextAttributes.IsDynamicResource) != 0 && clearDynamicResources)
-				RemoveDynamicResource(property);
+                context.Attributes &= ~BindableContextAttributes.IsDefaultValue;
 
-			BindingBase binding = context.Binding;
-			if (binding != null)
-			{
-				if (clearOneWayBindings && binding.GetRealizedMode(property) == BindingMode.OneWay || clearTwoWayBindings && binding.GetRealizedMode(property) == BindingMode.TwoWay)
-				{
-					RemoveBinding(property, context);
-					binding = null;
-				}
-			}
+                if ((context.Attributes & BindableContextAttributes.IsDynamicResource) != 0 && clearDynamicResources)
+                    RemoveDynamicResource(property);
 
-			if (!silent && (!same || raiseOnEqual))
-			{
-				if (binding != null && !currentlyApplying)
-				{
-					_applying = true;
-					binding.Apply(true);
-					_applying = false;
-				}
+                BindingBase binding = context.Binding;
+                if (binding != null)
+                {
+                    if (clearOneWayBindings && binding.GetRealizedMode(property) == BindingMode.OneWay || clearTwoWayBindings && binding.GetRealizedMode(property) == BindingMode.TwoWay)
+                    {
+                        RemoveBinding(property, context);
+                        binding = null;
+                    }
+                }
 
-				OnPropertyChanged(property.PropertyName);
+                if (!silent && (!same || raiseOnEqual))
+                {
+                    if (binding != null && !currentlyApplying)
+                    {
+                        _applying = true;
+                        binding.Apply(true);
+                        _applying = false;
+                    }
 
-				if (property.PropertyChanged != null)
-					property.PropertyChanged(this, original, value);
-			}
+                    OnPropertyChanged(property.PropertyName);
+
+                    if (property.PropertyChanged != null)
+                        property.PropertyChanged(this, original, value);
+                }
+            }
+            finally
+		    {
+                FormsProfiler.Stop();
+            }
 		}
 
 		[Flags]
