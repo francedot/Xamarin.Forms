@@ -19,7 +19,7 @@ using Xamarin.Forms.Platform.Android;
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
 
-#if ROOT_RENDERERS
+//#if ROOT_RENDERERS
 [assembly: ExportRenderer (typeof (BoxView), typeof (BoxRenderer))]
 [assembly: ExportRenderer (typeof (Entry), typeof (EntryRenderer))]
 [assembly: ExportRenderer (typeof (Editor), typeof (EditorRenderer))]
@@ -38,7 +38,7 @@ using Xamarin.Forms.Platform.Android;
 [assembly: ExportRenderer (typeof (Stepper), typeof (StepperRenderer))]
 [assembly: ExportRenderer (typeof (ProgressBar), typeof (ProgressBarRenderer))]
 [assembly: ExportRenderer (typeof (ScrollView), typeof (ScrollViewRenderer))]
-[assembly: ExportRenderer (typeof (Toolbar), typeof (ToolbarRenderer))]
+//[assembly: ExportRenderer (typeof (Toolbar), typeof (ToolbarRenderer))]
 [assembly: ExportRenderer (typeof (ActivityIndicator), typeof (ActivityIndicatorRenderer))]
 [assembly: ExportRenderer (typeof (Frame), typeof (FrameRenderer))]
 [assembly: ExportRenderer (typeof (NavigationMenu), typeof (NavigationMenuRenderer))]
@@ -49,7 +49,7 @@ using Xamarin.Forms.Platform.Android;
 [assembly: ExportRenderer (typeof (CarouselPage), typeof (CarouselPageRenderer))]
 [assembly: ExportRenderer (typeof (Page), typeof (PageRenderer))]
 [assembly: ExportRenderer (typeof (MasterDetailPage), typeof (MasterDetailRenderer))]
-#endif
+//#endif
 
 [assembly: ExportRenderer(typeof(NativeViewWrapper), typeof(NativeViewWrapperRenderer))]
 [assembly: ExportCell(typeof(Cell), typeof(CellRenderer))]
