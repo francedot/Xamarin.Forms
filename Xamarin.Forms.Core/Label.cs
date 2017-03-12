@@ -164,17 +164,26 @@ namespace Xamarin.Forms
 
 		static void OnTextPropertyChanged(BindableObject bindable, object oldvalue, object newvalue)
 		{
-			var label = (Label)bindable;
-			LineBreakMode breakMode = label.LineBreakMode;
-			bool isVerticallyFixed = (label.Constraint & LayoutConstraint.VerticallyFixed) != 0;
-			bool isSingleLine = !(breakMode == LineBreakMode.CharacterWrap || breakMode == LineBreakMode.WordWrap);
-			if (!isVerticallyFixed || !isSingleLine)
-				((Label)bindable).InvalidateMeasureInternal(InvalidationTrigger.MeasureChanged);
-			if (newvalue != null)
-				((Label)bindable).FormattedText = null;
-		}
+		    try
+		    {
+                FormsProfiler.Start();
 
-		static void OnVerticalTextAlignmentPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+                var label = (Label)bindable;
+                LineBreakMode breakMode = label.LineBreakMode;
+                bool isVerticallyFixed = (label.Constraint & LayoutConstraint.VerticallyFixed) != 0;
+                bool isSingleLine = !(breakMode == LineBreakMode.CharacterWrap || breakMode == LineBreakMode.WordWrap);
+                if (!isVerticallyFixed || !isSingleLine)
+                    ((Label)bindable).InvalidateMeasureInternal(InvalidationTrigger.MeasureChanged);
+                if (newvalue != null)
+                    ((Label)bindable).FormattedText = null;
+            }
+            finally
+		    {
+                FormsProfiler.Stop();
+            }
+        }
+
+        static void OnVerticalTextAlignmentPropertyChanged(BindableObject bindable, object oldValue, object newValue)
 		{
 			var label = (Label)bindable;
 #pragma warning disable 0618 // retain until YAlign removed
