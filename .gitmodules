@@ -1,0 +1,3 @@
+[submodule "xamarin-forms-performance-tips-and-tricks"]
+	path = xamarin-forms-performance-tips-and-tricks
+	url = https://github.com/francedot/xamarin-forms-performance-tips-and-tricks.git
