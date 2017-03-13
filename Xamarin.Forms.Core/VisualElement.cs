@@ -664,8 +664,17 @@ namespace Xamarin.Forms
 		}
 		internal virtual void InvalidateMeasureInternal(InvalidationTrigger trigger)
 		{
-			_measureCache.Clear();
-			MeasureInvalidated?.Invoke(this, new InvalidationEventArgs(trigger));
+		    try
+		    {
+                LayoutProfiler.Start(ClassId);
+
+                _measureCache.Clear();
+                MeasureInvalidated?.Invoke(this, new InvalidationEventArgs(trigger));
+            }
+            finally
+		    {
+                LayoutProfiler.Stop(ClassId);
+            }
 		}
 
 		void IVisualElementController.InvalidateMeasure(InvalidationTrigger trigger)
