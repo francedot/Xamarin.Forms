@@ -235,34 +235,43 @@ namespace Xamarin.Forms
 
 		protected void UpdateChildrenLayout()
 		{
-			if (!ShouldLayoutChildren())
-				return;
+		    try
+		    {
+                LayoutProfiler.Start(ClassId);
 
-			var startingLayout = new List<Rectangle>(ElementController.LogicalChildren.Count);
-			foreach (VisualElement c in ElementController.LogicalChildren)
-			{
-				startingLayout.Add(c.Bounds);
-			}
+                if (!ShouldLayoutChildren())
+                    return;
 
-			double x = Padding.Left;
-			double y = Padding.Top;
-			double w = Math.Max(0, Width - Padding.HorizontalThickness);
-			double h = Math.Max(0, Height - Padding.VerticalThickness);
+                var startingLayout = new List<Rectangle>(ElementController.LogicalChildren.Count);
+                foreach (VisualElement c in ElementController.LogicalChildren)
+                {
+                    startingLayout.Add(c.Bounds);
+                }
 
-			LayoutChildren(x, y, w, h);
+                double x = Padding.Left;
+                double y = Padding.Top;
+                double w = Math.Max(0, Width - Padding.HorizontalThickness);
+                double h = Math.Max(0, Height - Padding.VerticalThickness);
 
-			for (var i = 0; i < ElementController.LogicalChildren.Count; i++)
-			{
-				var c = (VisualElement)ElementController.LogicalChildren[i];
+                LayoutChildren(x, y, w, h);
 
-				if (c.Bounds != startingLayout[i])
-				{
-					EventHandler handler = LayoutChanged;
-					if (handler != null)
-						handler(this, EventArgs.Empty);
-					return;
-				}
-			}
+                for (var i = 0; i < ElementController.LogicalChildren.Count; i++)
+                {
+                    var c = (VisualElement)ElementController.LogicalChildren[i];
+
+                    if (c.Bounds != startingLayout[i])
+                    {
+                        EventHandler handler = LayoutChanged;
+                        if (handler != null)
+                            handler(this, EventArgs.Empty);
+                        return;
+                    }
+                }
+            }
+            finally
+		    {
+                LayoutProfiler.Stop(ClassId);
+            }
 		}
 
 		internal virtual void OnChildMeasureInvalidated(VisualElement child, InvalidationTrigger trigger)
