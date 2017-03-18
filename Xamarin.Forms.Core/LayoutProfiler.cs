@@ -25,8 +25,8 @@ namespace Xamarin.Forms
             foreach (KeyValuePair<string, Stats> kvp in Statistics.OrderBy(kvp => kvp.Key))
             {
                 string key = kvp.Key;
-                //double total = TimeSpan.FromTicks(kvp.Value.TotalTime).TotalMilliseconds;
-                //double avg = total / kvp.Value.CallCount;
+                double total = TimeSpan.FromTicks(kvp.Value.TotalTime).TotalMilliseconds;
+                double avg = total / kvp.Value.CallCount;
                 b.Append($"{key,-45} | {kvp.Value.CallCount,-10}"/* | {total,-10:N4}ms | {avg,-8:N4}ms"*/);
                 b.AppendLine();
             }
